@@ -17,7 +17,7 @@ export default function Navbar({ isDarkMode, toggleTheme, setShowDashboard }) {
   return (
     <nav className="w-full px-8 py-6 flex justify-between items-center z-50">
       <Link href="/" className="flex items-center gap-4 group">
-        <div className="relative w-12 h-12 rounded-full overflow-hidden shadow-[0_0_15px_rgba(255,51,51,0.5)] group-hover:shadow-[0_0_25px_rgba(255,51,51,0.8)] transition-all duration-300 border border-gray-800">
+        <div className="relative w-16 h-16 rounded-full overflow-hidden shadow-[0_0_15px_rgba(255,51,51,0.5)] group-hover:shadow-[0_0_25px_rgba(255,51,51,0.8)] transition-all duration-300 border border-gray-800">
           <img src="/umay_emblem.jpg" alt="UMAY Logo" className="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-500" />
         </div>
         <div className="flex flex-col justify-center">
