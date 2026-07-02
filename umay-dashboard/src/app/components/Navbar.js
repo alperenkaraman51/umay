@@ -15,7 +15,7 @@ export default function Navbar({ isDarkMode, toggleTheme, setShowDashboard }) {
   };
 
   return (
-    <nav className="w-full px-8 py-6 flex justify-between items-center z-50">
+    <nav className="relative w-full px-8 py-6 flex justify-between items-center z-50">
       <Link href="/" className="flex items-center gap-5 group cursor-pointer">
         <div className="relative w-24 h-24 rounded-full overflow-hidden shadow-[0_0_15px_rgba(255,51,51,0.5)] group-hover:shadow-[0_0_25px_rgba(255,51,51,0.8)] transition-all duration-300 border border-gray-800">
           <img src="/umay_emblem.jpg" alt="UMAY Logo" className="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-500" />
@@ -29,7 +29,7 @@ export default function Navbar({ isDarkMode, toggleTheme, setShowDashboard }) {
           </span>
         </div>
       </Link>
-      <div className="hidden md:flex gap-10 font-bold text-base" style={{ color: 'var(--text-muted)' }}>
+      <div className="hidden md:flex absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 gap-10 font-bold text-base" style={{ color: 'var(--text-muted)' }}>
         <Link href="/" className="hover:text-white transition-colors" style={{ color: pathname === '/' ? 'var(--foreground)' : '' }}>Ana Sayfa</Link>
         <Link href="/features" className="hover:text-white transition-colors" style={{ color: pathname === '/features' ? 'var(--foreground)' : '' }}>Özellikler</Link>
         <Link href="/pricing" className="hover:text-white transition-colors" style={{ color: pathname === '/pricing' ? 'var(--foreground)' : '' }}>Ücretlendirme</Link>
