@@ -16,20 +16,20 @@ export default function Navbar({ isDarkMode, toggleTheme, setShowDashboard }) {
 
   return (
     <nav className="w-full px-8 py-6 flex justify-between items-center z-50">
-      <Link href="/" className="flex items-center gap-4 group cursor-pointer">
-        <div className="relative w-20 h-20 rounded-full overflow-hidden shadow-[0_0_15px_rgba(255,51,51,0.5)] group-hover:shadow-[0_0_25px_rgba(255,51,51,0.8)] transition-all duration-300 border border-gray-800">
+      <Link href="/" className="flex items-center gap-5 group cursor-pointer">
+        <div className="relative w-24 h-24 rounded-full overflow-hidden shadow-[0_0_15px_rgba(255,51,51,0.5)] group-hover:shadow-[0_0_25px_rgba(255,51,51,0.8)] transition-all duration-300 border border-gray-800">
           <img src="/umay_emblem.jpg" alt="UMAY Logo" className="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-500" />
         </div>
         <div className="flex flex-col justify-center">
-          <span className="text-2xl font-black tracking-[0.15em] bg-clip-text text-transparent bg-gradient-to-r from-white to-gray-400 drop-shadow-md leading-none">
+          <span className="text-4xl font-black tracking-[0.15em] bg-clip-text text-transparent bg-gradient-to-r from-white to-gray-400 drop-shadow-md leading-none">
             UMAY
           </span>
-          <span className="text-[0.65rem] font-bold tracking-widest text-red-500 uppercase mt-1.5 leading-none">
+          <span className="text-xs font-bold tracking-widest text-red-500 uppercase mt-2 leading-none">
             Açık Kaynak İstihbarat Platformu
           </span>
         </div>
       </Link>
-      <div className="hidden md:flex gap-8 font-medium text-sm" style={{ color: 'var(--text-muted)' }}>
+      <div className="hidden md:flex gap-10 font-bold text-base" style={{ color: 'var(--text-muted)' }}>
         <Link href="/" className="hover:text-white transition-colors" style={{ color: pathname === '/' ? 'var(--foreground)' : '' }}>Ana Sayfa</Link>
         <Link href="/features" className="hover:text-white transition-colors" style={{ color: pathname === '/features' ? 'var(--foreground)' : '' }}>Özellikler</Link>
         <Link href="/pricing" className="hover:text-white transition-colors" style={{ color: pathname === '/pricing' ? 'var(--foreground)' : '' }}>Ücretlendirme</Link>
