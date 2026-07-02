@@ -1,0 +1,115 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+}
+
+:root {
+  --background: #000000;
+  --foreground: #ffffff;
+  --primary-red: #ff3333;
+  --dark-red: #8b0000;
+  --card-bg: #111111;
+  --border-color: #333333;
+  --text-muted: #9ca3af;
+  --success: #16a34a;
+  
+  --map-fill: #1f2937; /* slate-800 (daha görünür koyu gri/lacivert) */
+  --map-stroke: #374151; /* slate-700 */
+  --map-hover: #374151;
+  --map-text-shadow: 0px 1px 3px rgba(0,0,0,0.8);
+}
+
+.light {
+  --background: #f3f4f6;
+  --foreground: #111827;
+  --primary-red: #ef4444;
+  --dark-red: #b91c1c;
+  --card-bg: #ffffff;
+  --border-color: #d1d5db;
+  --text-muted: #4b5563;
+  --success: #15803d;
+
+  --map-fill: #e5e7eb;
+  --map-stroke: #9ca3af;
+  --map-hover: #d1d5db;
+  --map-text-shadow: 0px 1px 3px rgba(255,255,255,0.8);
+}
+
+body {
+  background-color: var(--background);
+  color: var(--foreground);
+  font-family: Arial, Helvetica, sans-serif;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.text-primary {
+  color: var(--primary-red);
+}
+
+.bg-primary {
+  background-color: var(--primary-red);
+}
+
+.card {
+  background-color: var(--card-bg);
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  transition: transform 0.2s ease, border-color 0.2s ease;
+}
+
+.card:hover {
+  transform: translateY(-2px);
+  border-color: var(--primary-red);
+}
+
+/* --- YENİ LANDING PAGE STİLLERİ --- */
+
+/* Yanıp sönen imleç (Blinking Cursor) animasyonu */
+@keyframes blink {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0; }
+}
+
+.typing-cursor {
+  display: inline-block;
+  width: 3px;
+  height: 1em;
+  background-color: var(--primary-red);
+  animation: blink 1s step-end infinite;
+  margin-left: 4px;
+  vertical-align: text-bottom;
+}
+
+/* Arka plan siber ızgara (cyber grid) */
+.cyber-grid-bg {
+  background-image: 
+    linear-gradient(rgba(255, 51, 51, 0.03) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 51, 51, 0.03) 1px, transparent 1px);
+  background-size: 40px 40px;
+  background-position: center center;
+}
+
+/* Özellik kartları (Feature Cards) için cam efekti */
+.glass-card {
+  background: rgba(17, 17, 17, 0.7);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  border-radius: 12px;
+  transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+}
+.glass-card:hover {
+  transform: translateY(-5px);
+  border-color: var(--primary-red);
+  box-shadow: 0 10px 30px rgba(255, 51, 51, 0.1);
+}
+
+/* Arama kutusu odaklama ışıması (Glow effect) */
+.search-glow {
+  transition: box-shadow 0.3s ease, border-color 0.3s ease;
+}
+.search-glow:focus-within {
+  box-shadow: 0 0 25px rgba(255, 51, 51, 0.25);
+  border-color: var(--primary-red) !important;
+}
