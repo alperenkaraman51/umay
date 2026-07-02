@@ -1,5 +1,5 @@
 "use client";
-import { useEffect, useState } from 'react';
+import { useEffect, useState, Suspense } from 'react';
 
 const API_BASE_URL = 'https://umay-api.onrender.com'; // Change to localhost:8000 for local dev
 
@@ -8,7 +8,7 @@ import { useSearchParams } from 'next/navigation';
 import DashboardCharts from './components/DashboardCharts';
 import Navbar from './components/Navbar';
 
-export default function Home() {
+function HomeContent() {
   const searchParams = useSearchParams();
   const [news, setNews] = useState([]);
   const [loading, setLoading] = useState(true);
@@ -610,5 +610,13 @@ export default function Home() {
       </>
       )}
     </div>
+  );
+}
+
+export default function Home() {
+  return (
+    <Suspense fallback={<div className="min-h-screen bg-[#050505] flex items-center justify-center text-red-500 font-bold">UMAY Yükleniyor...</div>}>
+      <HomeContent />
+    </Suspense>
   );
 }
