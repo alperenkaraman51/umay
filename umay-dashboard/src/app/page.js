@@ -227,7 +227,7 @@ function HomeContent() {
                       <div className="flex items-center gap-4 w-2/3">
                          <div className="flex items-center gap-3">
                            <div className="relative w-8 h-8 rounded-full overflow-hidden border border-gray-800 shadow-[0_0_10px_rgba(255,51,51,0.5)]">
-                             <img src="/umay/umay_emblem.jpg" alt="UMAY" className="w-full h-full object-cover" />
+                             <img src="/umay_emblem.jpg" alt="UMAY" className="w-full h-full object-cover" />
                            </div>
                            <span className="text-lg font-black tracking-widest text-transparent bg-clip-text bg-gradient-to-r from-white to-gray-400">UMAY</span>
                          </div>
@@ -326,7 +326,7 @@ function HomeContent() {
             <div className="max-w-6xl mx-auto px-6 text-center">
                <div className="flex flex-col items-center justify-center gap-6 mb-10 group cursor-default">
                  <div className="relative w-40 h-40 rounded-full overflow-hidden shadow-[0_0_30px_rgba(255,51,51,0.5)] group-hover:shadow-[0_0_50px_rgba(255,51,51,0.8)] transition-all duration-300 border border-gray-800">
-                   <img src="/umay/umay_emblem.jpg" alt="UMAY Logo" className="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-500" />
+                   <img src="/umay_emblem.jpg" alt="UMAY Logo" className="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-500" />
                  </div>
                  <div className="flex flex-col items-center justify-center text-center">
                    <h3 className="text-4xl font-black tracking-[0.15em] bg-clip-text text-transparent bg-gradient-to-r from-white to-gray-400 leading-none">
@@ -359,7 +359,7 @@ function HomeContent() {
         <div>
           <div className="flex items-center gap-4 mb-2 group cursor-default">
             <div className="relative w-16 h-16 rounded-full overflow-hidden shadow-[0_0_15px_rgba(255,51,51,0.5)] border border-gray-800">
-              <img src="/umay/umay_emblem.jpg" alt="UMAY Logo" className="w-full h-full object-cover" />
+              <img src="/umay_emblem.jpg" alt="UMAY Logo" className="w-full h-full object-cover" />
             </div>
             <div className="flex flex-col justify-center">
               <h1 className="text-4xl font-black tracking-[0.15em] bg-clip-text text-transparent bg-gradient-to-r from-white to-gray-400 leading-none">
