@@ -130,15 +130,15 @@ function HomeContent() {
           <Navbar isDarkMode={isDarkMode} toggleTheme={toggleTheme} setShowDashboard={setShowDashboard} />
 
           {/* MAIN HERO CONTENT */}
-          <div className="flex-1 flex flex-col justify-center items-center px-4 md:px-6 text-center py-10 md:py-20">
-            <div className="mb-12 mt-8 md:mt-0">
-              <h1 className="text-4xl md:text-5xl lg:text-7xl font-extrabold mb-6 tracking-tight leading-tight" style={{ color: 'var(--foreground)' }}>
+          <div className="flex-1 flex flex-col justify-center items-center px-4 md:px-6 text-center py-2 md:py-20">
+            <div className="mb-6 mt-2 md:mt-0 md:mb-12">
+              <h1 className="text-3xl md:text-5xl lg:text-7xl font-extrabold mb-4 md:mb-6 tracking-tight leading-tight" style={{ color: 'var(--foreground)' }}>
                 Açık Kaynaklarda <br/>
                 <span style={{ color: 'var(--primary-red)' }}>{typeText}</span>
                 <span className="typing-cursor"></span><br/>
                 Analiz Edin.
               </h1>
-              <p className="text-base md:text-xl text-gray-400 mb-10 max-w-3xl mx-auto px-2" style={{ color: 'var(--text-muted)' }}>
+              <p className="text-sm md:text-xl text-gray-400 mb-6 md:mb-10 max-w-3xl mx-auto px-2" style={{ color: 'var(--text-muted)' }}>
                 UMAY Platformu, internetin derinliklerinden gerçek zamanlı istihbarat toplar ve 
                 yapay zeka algoritmalarıyla olası riskleri saniyeler içinde raporlar.
               </p>
@@ -151,13 +151,13 @@ function HomeContent() {
                   placeholder="Anahtar kelime girin (Örn: Aselsan, Kaza, Siber Saldırı...)"
                   value={keyword}
                   onChange={(e) => setKeyword(e.target.value)}
-                  className="flex-1 rounded p-4 text-lg focus:outline-none transition-colors"
+                  className="flex-1 rounded p-3 md:p-4 text-base md:text-lg focus:outline-none transition-colors"
                   style={{ backgroundColor: 'rgba(0,0,0,0.5)', border: '1px solid var(--border-color)', color: 'var(--foreground)' }}
                 />
                 <select 
                   value={timeframe} 
                   onChange={(e) => setTimeframe(e.target.value)}
-                  className="rounded p-4 text-lg focus:outline-none"
+                  className="rounded p-3 md:p-4 text-base md:text-lg focus:outline-none"
                   style={{ backgroundColor: 'rgba(0,0,0,0.5)', border: '1px solid var(--border-color)', color: 'var(--foreground)' }}
                 >
                   <option value="1d">Son 24 Saat</option>
@@ -167,7 +167,7 @@ function HomeContent() {
                 <button 
                   type="submit" 
                   disabled={analyzing || !keyword}
-                  className={`px-10 py-4 rounded font-bold text-lg transition-all ${
+                  className={`px-6 py-3 md:px-10 md:py-4 rounded font-bold text-base md:text-lg transition-all ${
                     analyzing || !keyword 
                       ? 'opacity-50 cursor-not-allowed' 
                       : 'bg-primary text-white hover:bg-dark-red'
