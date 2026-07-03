@@ -16,7 +16,18 @@ export default function Navbar({ isDarkMode, toggleTheme, setShowDashboard }) {
 
   return (
     <nav className="relative w-full px-4 md:px-8 py-4 md:py-6 flex justify-between items-center z-50">
-      <Link href="/" onClick={() => setShowDashboard && setShowDashboard(false)} className="flex items-center gap-3 md:gap-5 group cursor-pointer">
+      <a 
+        href="/" 
+        onClick={(e) => {
+          if (setShowDashboard) {
+            e.preventDefault();
+            setShowDashboard(false);
+            window.history.pushState({}, '', '/');
+          }
+        }} 
+        className="flex items-center gap-3 md:gap-5 group cursor-pointer"
+        style={{ WebkitTapHighlightColor: 'transparent' }}
+      >
         <div className="relative w-16 h-16 md:w-24 md:h-24 rounded-full overflow-hidden shadow-[0_0_15px_rgba(255,51,51,0.5)] group-hover:shadow-[0_0_25px_rgba(255,51,51,0.8)] transition-all duration-300 border border-gray-800">
           <img src="/umay_emblem.jpg" alt="UMAY Logo" className="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-500" />
         </div>
@@ -28,7 +39,7 @@ export default function Navbar({ isDarkMode, toggleTheme, setShowDashboard }) {
             Açık Kaynak İstihbarat Platformu
           </span>
         </div>
-      </Link>
+      </a>
       <div className="hidden md:flex absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 gap-10 font-bold text-base" style={{ color: 'var(--text-muted)' }}>
         <Link href="/" className="hover:text-white transition-colors" style={{ color: pathname === '/' ? 'var(--foreground)' : '' }}>Ana Sayfa</Link>
         <Link href="/features" className="hover:text-white transition-colors" style={{ color: pathname === '/features' ? 'var(--foreground)' : '' }}>Özellikler</Link>
