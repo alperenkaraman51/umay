@@ -152,13 +152,13 @@ function HomeContent() {
                   value={keyword}
                   onChange={(e) => setKeyword(e.target.value)}
                   className="flex-1 rounded p-3 md:p-4 text-base md:text-lg focus:outline-none transition-colors"
-                  style={{ backgroundColor: 'rgba(0,0,0,0.5)', border: '1px solid var(--border-color)', color: 'var(--foreground)' }}
+                  style={{ backgroundColor: 'var(--background)', border: '1px solid var(--border-color)', color: 'var(--foreground)' }}
                 />
                 <select 
                   value={timeframe} 
                   onChange={(e) => setTimeframe(e.target.value)}
                   className="rounded p-3 md:p-4 text-base md:text-lg focus:outline-none"
-                  style={{ backgroundColor: 'rgba(0,0,0,0.5)', border: '1px solid var(--border-color)', color: 'var(--foreground)' }}
+                  style={{ backgroundColor: 'var(--background)', border: '1px solid var(--border-color)', color: 'var(--foreground)' }}
                 >
                   <option value="1d">Son 24 Saat</option>
                   <option value="7d">Son 7 Gün</option>
@@ -224,13 +224,13 @@ function HomeContent() {
                 {/* LESS BLUR: blur-[6px] instead of blur-md, higher opacity */}
                 <div className="filter blur-[6px] opacity-70 select-none pointer-events-none">
                    {/* Search Bar */}
-                   <section className="mb-8 card p-6 border flex items-center justify-between" style={{ borderColor: 'var(--border-color)', backgroundColor: 'rgba(0,0,0,0.5)' }}>
+                   <section className="mb-8 card p-6 border flex items-center justify-between" style={{ borderColor: 'var(--border-color)', backgroundColor: 'var(--background)' }}>
                       <div className="flex items-center gap-4 w-2/3">
                          <div className="flex items-center gap-3">
                            <div className="relative w-8 h-8 rounded-full overflow-hidden border border-gray-800 shadow-[0_0_10px_rgba(255,51,51,0.5)]">
                              <img src="/umay_emblem.jpg" alt="UMAY" className="w-full h-full object-cover" />
                            </div>
-                           <span className="text-lg font-black tracking-widest text-transparent bg-clip-text bg-gradient-to-r from-white to-gray-400">UMAY</span>
+                           <span className="text-lg font-black tracking-widest gradient-text">UMAY</span>
                          </div>
                          <div className="h-8 w-px bg-gray-800 mx-2"></div>
                          <div className="flex-1 rounded p-3 text-sm" style={{ backgroundColor: 'var(--background)', border: '1px solid var(--border-color)', color: 'var(--foreground)' }}>Siber Güvenlik Zafiyeti</div>
@@ -270,7 +270,7 @@ function HomeContent() {
                       </div>
                       
                       {/* Risk Analysis */}
-                      <div className="col-span-1 card p-6 border flex flex-col justify-center" style={{ borderColor: 'var(--border-color)', backgroundColor: 'rgba(0,0,0,0.5)' }}>
+                      <div className="col-span-1 card p-6 border flex flex-col justify-center" style={{ borderColor: 'var(--border-color)', backgroundColor: 'var(--background)' }}>
                          <h3 className="text-lg font-bold mb-6 flex items-center gap-2" style={{ color: 'var(--primary-red)' }}>
                            <span className="w-2 h-2 rounded-full bg-red-500 animate-pulse"></span> Canlı Risk Analizi
                          </h3>
@@ -293,7 +293,7 @@ function HomeContent() {
 
                    {/* Example Cards */}
                    <section className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                      <div className="card p-6 border" style={{ borderLeft: '4px solid var(--primary-red)', borderColor: 'var(--border-color)', backgroundColor: 'rgba(0,0,0,0.5)' }}>
+                      <div className="card p-6 border" style={{ borderLeft: '4px solid var(--primary-red)', borderColor: 'var(--border-color)', backgroundColor: 'var(--background)' }}>
                          <div className="flex justify-between items-start mb-4">
                            <span className="px-3 py-1 rounded text-xs font-bold" style={{ backgroundColor: 'rgba(255,51,51,0.1)', color: 'var(--primary-red)' }}>Telegram</span>
                            <span className="text-red-500 font-bold">Tehdit Skoru: 0.95</span>
@@ -301,7 +301,7 @@ function HomeContent() {
                          <h3 className="text-lg font-bold" style={{ color: 'var(--foreground)' }}>Kritik Siber Güvenlik Zafiyeti Tespit Edildi</h3>
                          <p className="mt-2 text-sm" style={{ color: 'var(--text-muted)' }}>Hacker grupları tarafından şirkete ait veritabanı sızıntısı satışa çıkarıldı. 10.000'den fazla kullanıcının parolası ifşa oldu.</p>
                       </div>
-                      <div className="card p-6 border" style={{ borderLeft: '4px solid #eab308', borderColor: 'var(--border-color)', backgroundColor: 'rgba(0,0,0,0.5)' }}>
+                      <div className="card p-6 border" style={{ borderLeft: '4px solid #eab308', borderColor: 'var(--border-color)', backgroundColor: 'var(--background)' }}>
                          <div className="flex justify-between items-start mb-4">
                            <span className="px-3 py-1 rounded text-xs font-bold" style={{ backgroundColor: 'rgba(234,179,8,0.1)', color: '#eab308' }}>Ekşi Sözlük</span>
                            <span className="text-yellow-500 font-bold">Tehdit Skoru: 0.65</span>
@@ -330,8 +330,8 @@ function HomeContent() {
                    <img src="/umay_emblem.jpg" alt="UMAY Logo" className="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-500" />
                  </div>
                  <div className="flex flex-col items-center justify-center text-center">
-                   <h3 className="text-4xl font-black tracking-[0.15em] bg-clip-text text-transparent bg-gradient-to-r from-white to-gray-400 leading-none">
-                    UMAY
+                   <h3 className="text-4xl font-black tracking-[0.15em] gradient-text leading-none">
+                     UMAY
                    </h3>
                    <span className="text-sm font-bold tracking-widest text-red-500 uppercase mt-3 leading-none">Açık Kaynak İstihbarat Platformu</span>
                  </div>
@@ -370,7 +370,7 @@ function HomeContent() {
               <img src="/umay_emblem.jpg" alt="UMAY Logo" className="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-500" />
             </div>
             <div className="flex flex-col justify-center">
-              <h1 className="text-2xl md:text-4xl font-black tracking-[0.15em] bg-clip-text text-transparent bg-gradient-to-r from-white to-gray-400 leading-none">
+              <h1 className="text-2xl md:text-4xl font-black tracking-[0.15em] gradient-text leading-none">
                 UMAY
               </h1>
               <span className="text-[0.6rem] md:text-xs font-bold tracking-widest text-red-500 uppercase mt-1 md:mt-2 leading-none">

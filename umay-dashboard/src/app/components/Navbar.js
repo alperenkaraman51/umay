@@ -32,7 +32,7 @@ export default function Navbar({ isDarkMode, toggleTheme, setShowDashboard }) {
           <img src="/umay_emblem.jpg" alt="UMAY Logo" className="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-500" />
         </div>
         <div className="flex flex-col justify-center">
-          <span className="text-2xl md:text-4xl font-black tracking-[0.15em] bg-clip-text text-transparent bg-gradient-to-r from-white to-gray-400 drop-shadow-md leading-none">
+          <span className="text-2xl md:text-4xl font-black tracking-[0.15em] gradient-text drop-shadow-md leading-none">
             UMAY
           </span>
           <span className="hidden sm:block text-[0.65rem] md:text-xs font-bold tracking-widest text-red-500 uppercase mt-1 md:mt-2 leading-none">

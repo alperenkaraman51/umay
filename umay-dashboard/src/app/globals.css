@@ -19,6 +19,12 @@
   --map-stroke: #374151; /* slate-700 */
   --map-hover: #374151;
   --map-text-shadow: 0px 1px 3px rgba(0,0,0,0.8);
+  
+  --grid-color: rgba(255, 51, 51, 0.05);
+  --glass-bg: rgba(17, 17, 17, 0.7);
+  --glass-border: rgba(255, 255, 255, 0.05);
+  --gradient-start: #ffffff;
+  --gradient-end: #9ca3af;
 }
 
 .light {
@@ -35,6 +41,12 @@
   --map-stroke: #9ca3af;
   --map-hover: #d1d5db;
   --map-text-shadow: 0px 1px 3px rgba(255,255,255,0.8);
+
+  --grid-color: rgba(239, 68, 68, 0.1);
+  --glass-bg: rgba(255, 255, 255, 0.85);
+  --glass-border: rgba(0, 0, 0, 0.1);
+  --gradient-start: #111827;
+  --gradient-end: #6b7280;
 }
 
 body {
@@ -64,6 +76,13 @@ body {
   border-color: var(--primary-red);
 }
 
+.gradient-text {
+  background: linear-gradient(to right, var(--gradient-start), var(--gradient-end));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
 /* --- YENİ LANDING PAGE STİLLERİ --- */
 
 /* Yanıp sönen imleç (Blinking Cursor) animasyonu */
@@ -85,19 +104,19 @@ body {
 /* Arka plan siber ızgara (cyber grid) */
 .cyber-grid-bg {
   background-image: 
-    linear-gradient(rgba(255, 51, 51, 0.03) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(255, 51, 51, 0.03) 1px, transparent 1px);
+    linear-gradient(var(--grid-color) 1px, transparent 1px),
+    linear-gradient(90deg, var(--grid-color) 1px, transparent 1px);
   background-size: 40px 40px;
   background-position: center center;
 }
 
 /* Özellik kartları (Feature Cards) için cam efekti */
 .glass-card {
-  background: rgba(17, 17, 17, 0.7);
+  background: var(--glass-bg);
   backdrop-filter: blur(10px);
-  border: 1px solid rgba(255, 255, 255, 0.05);
+  border: 1px solid var(--glass-border);
   border-radius: 12px;
-  transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+  transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease, background 0.3s ease;
 }
 .glass-card:hover {
   transform: translateY(-5px);
