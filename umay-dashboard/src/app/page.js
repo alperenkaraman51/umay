@@ -121,7 +121,7 @@ function HomeContent() {
   };
 
   return (
-    <div className={`min-h-screen font-sans transition-colors duration-300 ${!showDashboard ? 'cyber-grid-bg' : 'p-8 md:p-20'}`}>
+    <div className={`min-h-screen font-sans transition-colors duration-300 ${!showDashboard ? 'cyber-grid-bg' : 'p-4 md:p-8 lg:p-20'}`}>
       
       {!showDashboard ? (
         // --- LANDING PAGE MODE ---
@@ -130,21 +130,21 @@ function HomeContent() {
           <Navbar isDarkMode={isDarkMode} toggleTheme={toggleTheme} setShowDashboard={setShowDashboard} />
 
           {/* MAIN HERO CONTENT */}
-          <div className="flex-1 flex flex-col justify-center items-center px-6 text-center py-20">
-            <div className="mb-12">
-              <h1 className="text-5xl md:text-7xl font-extrabold mb-6 tracking-tight leading-tight" style={{ color: 'var(--foreground)' }}>
+          <div className="flex-1 flex flex-col justify-center items-center px-4 md:px-6 text-center py-10 md:py-20">
+            <div className="mb-12 mt-8 md:mt-0">
+              <h1 className="text-4xl md:text-5xl lg:text-7xl font-extrabold mb-6 tracking-tight leading-tight" style={{ color: 'var(--foreground)' }}>
                 Açık Kaynaklarda <br/>
                 <span style={{ color: 'var(--primary-red)' }}>{typeText}</span>
                 <span className="typing-cursor"></span><br/>
                 Analiz Edin.
               </h1>
-              <p className="text-lg md:text-xl text-gray-400 mb-10 max-w-3xl mx-auto" style={{ color: 'var(--text-muted)' }}>
+              <p className="text-base md:text-xl text-gray-400 mb-10 max-w-3xl mx-auto px-2" style={{ color: 'var(--text-muted)' }}>
                 UMAY Platformu, internetin derinliklerinden gerçek zamanlı istihbarat toplar ve 
                 yapay zeka algoritmalarıyla olası riskleri saniyeler içinde raporlar.
               </p>
             </div>
 
-            <div className="w-full max-w-4xl glass-card p-6 search-glow relative z-10">
+            <div className="w-full max-w-4xl glass-card p-4 md:p-6 search-glow relative z-10">
               <form onSubmit={handleAnalyze} className="flex flex-col md:flex-row gap-4">
                 <input 
                   type="text" 
@@ -206,9 +206,9 @@ function HomeContent() {
           </div>
 
           {/* Dashboard Önizleme (Temsili) */}
-          <div className="w-full max-w-7xl mx-auto px-6 py-24 text-center">
-             <h2 className="text-4xl font-bold mb-4 tracking-tight" style={{ color: 'var(--foreground)' }}>Komuta Merkezi: UMAY Dashboard</h2>
-             <p className="text-lg mb-16 max-w-2xl mx-auto" style={{ color: 'var(--text-muted)' }}>Karmaşık açık kaynak verilerini saniyeler içinde karar destek mekanizmasına dönüştüren modern, karanlık ve eyleme geçirilebilir arayüz.</p>
+          <div className="w-full max-w-7xl mx-auto px-4 md:px-6 py-12 md:py-24 text-center">
+             <h2 className="text-3xl md:text-4xl font-bold mb-4 tracking-tight" style={{ color: 'var(--foreground)' }}>Komuta Merkezi: UMAY Dashboard</h2>
+             <p className="text-base md:text-lg mb-10 md:mb-16 max-w-2xl mx-auto" style={{ color: 'var(--text-muted)' }}>Karmaşık açık kaynak verilerini saniyeler içinde karar destek mekanizmasına dönüştüren modern, karanlık ve eyleme geçirilebilir arayüz.</p>
 
              <div className="relative w-full rounded-2xl overflow-hidden glass-card border shadow-[0_0_50px_rgba(255,51,51,0.05)] text-left" style={{ borderColor: 'var(--border-color)' }}>
                {/* Browser Mac Header */}

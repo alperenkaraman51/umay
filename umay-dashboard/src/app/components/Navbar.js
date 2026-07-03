@@ -15,16 +15,16 @@ export default function Navbar({ isDarkMode, toggleTheme, setShowDashboard }) {
   };
 
   return (
-    <nav className="relative w-full px-8 py-6 flex justify-between items-center z-50">
-      <Link href="/" className="flex items-center gap-5 group cursor-pointer">
-        <div className="relative w-24 h-24 rounded-full overflow-hidden shadow-[0_0_15px_rgba(255,51,51,0.5)] group-hover:shadow-[0_0_25px_rgba(255,51,51,0.8)] transition-all duration-300 border border-gray-800">
+    <nav className="relative w-full px-4 md:px-8 py-4 md:py-6 flex justify-between items-center z-50">
+      <Link href="/" className="flex items-center gap-3 md:gap-5 group cursor-pointer">
+        <div className="relative w-16 h-16 md:w-24 md:h-24 rounded-full overflow-hidden shadow-[0_0_15px_rgba(255,51,51,0.5)] group-hover:shadow-[0_0_25px_rgba(255,51,51,0.8)] transition-all duration-300 border border-gray-800">
           <img src="/umay_emblem.jpg" alt="UMAY Logo" className="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-500" />
         </div>
         <div className="flex flex-col justify-center">
-          <span className="text-4xl font-black tracking-[0.15em] bg-clip-text text-transparent bg-gradient-to-r from-white to-gray-400 drop-shadow-md leading-none">
+          <span className="text-2xl md:text-4xl font-black tracking-[0.15em] bg-clip-text text-transparent bg-gradient-to-r from-white to-gray-400 drop-shadow-md leading-none">
             UMAY
           </span>
-          <span className="text-xs font-bold tracking-widest text-red-500 uppercase mt-2 leading-none">
+          <span className="hidden sm:block text-[0.65rem] md:text-xs font-bold tracking-widest text-red-500 uppercase mt-1 md:mt-2 leading-none">
             Açık Kaynak İstihbarat Platformu
           </span>
         </div>
@@ -35,13 +35,13 @@ export default function Navbar({ isDarkMode, toggleTheme, setShowDashboard }) {
         <Link href="/pricing" className="hover:text-white transition-colors" style={{ color: pathname === '/pricing' ? 'var(--foreground)' : '' }}>Ücretlendirme</Link>
         <Link href="/about" className="hover:text-white transition-colors" style={{ color: pathname === '/about' ? 'var(--foreground)' : '' }}>Hakkımızda</Link>
       </div>
-      <div className="flex gap-4 items-center">
+      <div className="flex gap-2 md:gap-4 items-center">
         {toggleTheme && (
-          <button onClick={toggleTheme} className="p-2 rounded-full transition-colors hover:bg-gray-800/10" style={{ color: 'var(--foreground)' }}>
-            {isDarkMode ? <Sun size={20} /> : <Moon size={20} />}
+          <button onClick={toggleTheme} className="p-1.5 md:p-2 rounded-full transition-colors hover:bg-gray-800/10" style={{ color: 'var(--foreground)' }}>
+            {isDarkMode ? <Sun size={18} className="md:w-5 md:h-5" /> : <Moon size={18} className="md:w-5 md:h-5" />}
           </button>
         )}
-        <button onClick={handleDashboardClick} className="text-sm px-6 py-2.5 rounded font-bold transition-all" style={{ backgroundColor: 'var(--foreground)', color: 'var(--background)' }}>
+        <button onClick={handleDashboardClick} className="text-xs md:text-sm px-4 py-2 md:px-6 md:py-2.5 rounded font-bold transition-all whitespace-nowrap" style={{ backgroundColor: 'var(--foreground)', color: 'var(--background)' }}>
           Sisteme Giriş
         </button>
       </div>
