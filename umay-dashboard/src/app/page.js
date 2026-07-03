@@ -219,7 +219,8 @@ function HomeContent() {
                </div>
                
                {/* Realistic Blurred Dashboard Content */}
-               <div className="p-8 bg-background relative overflow-hidden" style={{ backgroundColor: 'var(--background)' }}>
+               <div className="p-4 md:p-8 bg-background relative overflow-hidden h-[350px] md:h-auto" style={{ backgroundColor: 'var(--background)' }}>
+                 <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-[var(--background)] to-transparent z-20 md:hidden pointer-events-none"></div>
                 {/* LESS BLUR: blur-[6px] instead of blur-md, higher opacity */}
                 <div className="filter blur-[6px] opacity-70 select-none pointer-events-none">
                    {/* Search Bar */}
@@ -355,26 +356,33 @@ function HomeContent() {
       ) : (
         // --- DASHBOARD MODE ---
         <>
-          <header className="mb-8 pb-6 flex items-center justify-between" style={{ borderBottom: '1px solid var(--border-color)' }}>
-        <div>
-          <div className="flex items-center gap-4 mb-2 group cursor-default">
-            <div className="relative w-16 h-16 rounded-full overflow-hidden shadow-[0_0_15px_rgba(255,51,51,0.5)] border border-gray-800">
-              <img src="/umay_emblem.jpg" alt="UMAY Logo" className="w-full h-full object-cover" />
+          <header className="mb-8 pb-6 flex flex-col md:flex-row items-start md:items-center justify-between gap-4" style={{ borderBottom: '1px solid var(--border-color)' }}>
+        <div 
+          onClick={() => {
+            setShowDashboard(false);
+            window.history.pushState({}, '', '/');
+          }}
+          className="cursor-pointer group"
+          style={{ WebkitTapHighlightColor: 'transparent' }}
+        >
+          <div className="flex items-center gap-3 md:gap-4 mb-2">
+            <div className="relative w-12 h-12 md:w-16 md:h-16 rounded-full overflow-hidden shadow-[0_0_15px_rgba(255,51,51,0.5)] border border-gray-800 group-hover:shadow-[0_0_25px_rgba(255,51,51,0.8)] transition-all">
+              <img src="/umay_emblem.jpg" alt="UMAY Logo" className="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-500" />
             </div>
             <div className="flex flex-col justify-center">
-              <h1 className="text-4xl font-black tracking-[0.15em] bg-clip-text text-transparent bg-gradient-to-r from-white to-gray-400 leading-none">
+              <h1 className="text-2xl md:text-4xl font-black tracking-[0.15em] bg-clip-text text-transparent bg-gradient-to-r from-white to-gray-400 leading-none">
                 UMAY
               </h1>
-              <span className="text-xs font-bold tracking-widest text-red-500 uppercase mt-2 leading-none">
+              <span className="text-[0.6rem] md:text-xs font-bold tracking-widest text-red-500 uppercase mt-1 md:mt-2 leading-none">
                 Açık Kaynak İstihbarat Platformu
               </span>
             </div>
           </div>
-          <p className="mt-2 text-sm uppercase tracking-widest" style={{ color: 'var(--text-muted)' }}>
+          <p className="mt-2 text-xs md:text-sm uppercase tracking-widest" style={{ color: 'var(--text-muted)' }}>
             Açık Kaynak İstihbarat ve Tehdit Analizi
           </p>
         </div>
-        <div className="flex items-center gap-6">
+        <div className="flex items-center gap-4 md:gap-6 w-full md:w-auto justify-between md:justify-end">
           <button 
             onClick={toggleTheme}
             className="p-2 rounded-full transition-colors hover:bg-gray-800/10"
