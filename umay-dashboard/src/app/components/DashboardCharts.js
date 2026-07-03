@@ -125,17 +125,17 @@ export default function DashboardCharts({ newsData }) {
         </div>
       )}
 
-      {/* Canlı Harita - DEV EKRAN */}
+      {/* Canlı Harita */}
       <div 
-        className="rounded-lg p-6 hover:border-primary transition-colors duration-300 group w-full relative"
+        className="rounded-lg p-4 md:p-6 hover:border-primary transition-colors duration-300 group w-full relative"
         style={{ backgroundColor: 'var(--card-bg)', border: '1px solid var(--border-color)' }}
       >
-        <h3 className="text-lg font-semibold mb-4 pl-3 flex justify-between items-center" style={{ borderLeft: '2px solid var(--foreground)' }}>
+        <h3 className="text-base md:text-lg font-semibold mb-4 pl-3 flex justify-between items-center" style={{ borderLeft: '2px solid var(--foreground)' }}>
           Canlı İstihbarat Yoğunluk Haritası
-          {highRiskCount > 0 && <span className="text-xs px-2 py-1 rounded text-white animate-pulse" style={{ backgroundColor: 'var(--primary-red)' }}>Tehdit Sinyali</span>}
+          {highRiskCount > 0 && <span className="text-[0.6rem] md:text-xs px-2 py-1 rounded text-white animate-pulse" style={{ backgroundColor: 'var(--primary-red)' }}>Tehdit Sinyali</span>}
         </h3>
         
-        <div className="h-[550px] w-full rounded-lg overflow-hidden relative transition-transform duration-500 group-hover:scale-[1.01] cursor-grab active:cursor-grabbing" style={{ backgroundColor: 'var(--background)' }}>
+        <div className="h-[300px] md:h-[550px] w-full rounded-lg overflow-hidden relative transition-transform duration-500 group-hover:scale-[1.01] cursor-grab active:cursor-grabbing" style={{ backgroundColor: 'var(--background)' }}>
           
           {/* Zoom Kontrol Butonları */}
           <div className="absolute top-4 right-4 flex flex-col gap-2 z-10">
@@ -263,10 +263,10 @@ export default function DashboardCharts({ newsData }) {
         
         {/* Pasta Grafik */}
         <div 
-          className="w-full lg:w-1/3 rounded-lg p-6 hover:border-primary transition-colors duration-300"
+          className="w-full lg:w-1/3 rounded-lg p-4 md:p-6 hover:border-primary transition-colors duration-300"
           style={{ backgroundColor: 'var(--card-bg)', border: '1px solid var(--border-color)' }}
         >
-          <h3 className="text-lg font-semibold mb-4 pl-3" style={{ borderLeft: '2px solid var(--primary-red)' }}>Tehdit Dağılımı</h3>
+          <h3 className="text-base md:text-lg font-semibold mb-4 pl-3" style={{ borderLeft: '2px solid var(--primary-red)' }}>Tehdit Dağılımı</h3>
           <div className="h-[250px] w-full">
             <ResponsiveContainer width="100%" height="100%">
               <PieChart>
@@ -296,10 +296,10 @@ export default function DashboardCharts({ newsData }) {
 
         {/* Canlı Risk Skoru Tablosu */}
         <div 
-          className="w-full lg:w-2/3 rounded-lg p-6 hover:border-primary transition-colors duration-300 overflow-hidden flex flex-col"
+          className="w-full lg:w-2/3 rounded-lg p-4 md:p-6 hover:border-primary transition-colors duration-300 overflow-hidden flex flex-col"
           style={{ backgroundColor: 'var(--card-bg)', border: '1px solid var(--border-color)' }}
         >
-          <h3 className="text-lg font-semibold mb-4 pl-3" style={{ borderLeft: '2px solid var(--primary-red)' }}>En Yüksek Riskli Haberler</h3>
+          <h3 className="text-base md:text-lg font-semibold mb-4 pl-3" style={{ borderLeft: '2px solid var(--primary-red)' }}>En Yüksek Riskli Haberler</h3>
           <div className="overflow-x-auto flex-1">
             <table className="w-full text-sm text-left">
               <thead className="text-xs uppercase" style={{ backgroundColor: 'var(--background)', color: 'var(--text-muted)' }}>
