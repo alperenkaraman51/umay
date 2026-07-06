@@ -170,7 +170,7 @@ function HomeContent() {
                   className={`px-6 py-3 md:px-10 md:py-4 rounded font-bold text-base md:text-lg transition-all ${
                     analyzing || !keyword 
                       ? 'bg-[var(--border-color)] text-[var(--text-muted)] opacity-50 cursor-not-allowed' 
-                      : 'bg-blue-600 text-white hover:bg-blue-700'
+                      : 'bg-primary text-white hover:bg-dark-red'
                   }`}
                   style={{ color: (analyzing || !keyword) ? 'var(--text-muted)' : '#fff' }}
                 >
@@ -236,7 +236,7 @@ function HomeContent() {
                          <div className="flex-1 rounded p-3 text-sm" style={{ backgroundColor: 'var(--background)', border: '1px solid var(--border-color)', color: 'var(--foreground)' }}>Siber Güvenlik Zafiyeti</div>
                          <div className="rounded p-3 w-32 text-sm text-center" style={{ backgroundColor: 'var(--background)', border: '1px solid var(--border-color)', color: 'var(--text-muted)' }}>Son 24 Saat</div>
                       </div>
-                       <div className="px-10 py-3 rounded font-bold text-sm bg-blue-600 text-white">Analiz Et</div>
+                       <div className="px-10 py-3 rounded font-bold text-sm bg-primary text-white hover:bg-dark-red transition-colors cursor-pointer">Analiz Et</div>
                    </section>
 
                    {/* Map and Risk Analysis Section */}
@@ -427,7 +427,7 @@ function HomeContent() {
             className={`px-8 py-3 rounded font-bold transition-all ${
               analyzing || !keyword 
                 ? 'bg-[var(--border-color)] text-[var(--text-muted)] opacity-50 cursor-not-allowed' 
-                : 'bg-blue-600 text-white hover:bg-blue-700'
+                : 'bg-primary text-white hover:bg-dark-red'
             }`}
             style={{ color: (analyzing || !keyword) ? 'var(--text-muted)' : '#fff' }}
           >
