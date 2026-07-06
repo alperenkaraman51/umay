@@ -169,10 +169,10 @@ function HomeContent() {
                   disabled={analyzing || !keyword}
                   className={`px-6 py-3 md:px-10 md:py-4 rounded font-bold text-base md:text-lg transition-all ${
                     analyzing || !keyword 
-                      ? 'opacity-50 cursor-not-allowed' 
-                      : 'bg-primary text-white hover:bg-dark-red'
+                      ? 'bg-[var(--border-color)] text-[var(--text-muted)] opacity-50 cursor-not-allowed' 
+                      : 'bg-blue-600 text-white hover:bg-blue-700'
                   }`}
-                  style={{ backgroundColor: (analyzing || !keyword) ? 'var(--border-color)' : 'var(--primary-red)', color: (analyzing || !keyword) ? 'var(--text-muted)' : '#fff' }}
+                  style={{ color: (analyzing || !keyword) ? 'var(--text-muted)' : '#fff' }}
                 >
                   {analyzing ? 'Taranıyor...' : 'Analiz Et'}
                 </button>
@@ -236,7 +236,7 @@ function HomeContent() {
                          <div className="flex-1 rounded p-3 text-sm" style={{ backgroundColor: 'var(--background)', border: '1px solid var(--border-color)', color: 'var(--foreground)' }}>Siber Güvenlik Zafiyeti</div>
                          <div className="rounded p-3 w-32 text-sm text-center" style={{ backgroundColor: 'var(--background)', border: '1px solid var(--border-color)', color: 'var(--text-muted)' }}>Son 24 Saat</div>
                       </div>
-                      <div className="px-10 py-3 rounded font-bold text-sm" style={{ backgroundColor: 'var(--primary-red)', color: 'white' }}>Analiz Et</div>
+                       <div className="px-10 py-3 rounded font-bold text-sm bg-blue-600 text-white">Analiz Et</div>
                    </section>
 
                    {/* Map and Risk Analysis Section */}
@@ -426,10 +426,10 @@ function HomeContent() {
             disabled={analyzing || !keyword}
             className={`px-8 py-3 rounded font-bold transition-all ${
               analyzing || !keyword 
-                ? 'opacity-50 cursor-not-allowed' 
-                : 'bg-primary text-white hover:bg-dark-red'
+                ? 'bg-[var(--border-color)] text-[var(--text-muted)] opacity-50 cursor-not-allowed' 
+                : 'bg-blue-600 text-white hover:bg-blue-700'
             }`}
-            style={{ backgroundColor: (analyzing || !keyword) ? 'var(--border-color)' : 'var(--primary-red)', color: (analyzing || !keyword) ? 'var(--text-muted)' : '#fff' }}
+            style={{ color: (analyzing || !keyword) ? 'var(--text-muted)' : '#fff' }}
           >
             {analyzing ? 'Taranıyor...' : 'Analiz Et'}
           </button>
